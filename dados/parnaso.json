@@ -1,0 +1,45 @@
+{
+  "nome": "Parque Nacional da Serra dos Órgãos (PARNASO)",
+  "localizacao": "Av. Rotariana, s/n - Soberbo, Teresópolis - RJ, 25960-602.",
+  "horario": "Terça-feira a Domingos e Feriados das 07h-16h",
+  "contato": "(21) 97896-2463",
+  "descricao":"O Parque é uma Unidade de Conservação Federal gerida pelo ICMBio, autarquia federal vinculada ao Ministério do Meio Ambiente – MMA. Distingue-se como um dos principais locais do País para a prática de esportes de montanha, como escalada, caminhada, rapel e outros; além de possuir diversas cachoeiras. O Parque Nacional tem a maior rede de trilhas do Brasil. São mais de 200 Km de trilhas em todos os níveis de dificuldade: desde a trilha suspensa, acessível à cadeirantes, até a pesada Travessia Petrópolis-Teresópolis, com 30 Km de subidas e descidas pela parte alta das montanhas.",
+  "trilhas": [
+    {
+      "nome": "Trilha Suspensa",
+      "nível": "Fácil",
+      "tempo": "30 min -1h"
+    },
+
+    {
+      "nome": "Cartão Postal",
+      "nível": "Médio",
+      "tempo": "2h" 
+    },
+       
+    {
+      "nome": "Travessia Petrópolis-Teresópolis",
+      "nível": "Difícil",
+      "tempo": "2 a 3 dias"
+    }
+  ],
+
+  "cachoeiras": [
+    {
+      "nome": "Cachoeira Véu da Noiva",
+      "acesso": "Fácil",
+      "indicadoPara": "Crianças e Adultos"
+    },
+
+    {
+      "nome": "Poço dois Irmãos",
+      "acesso": "Moderado",
+      "indicadoPara": "Adultos"
+    }
+  ],
+
+  "biodiversidade": {
+    "fauna": ["tucanos", "bugios", "jaguatiricas", "sábias", "jararaca"],
+    "flora": ["bromélias", "orquídeas", "samambaias"]
+  }
+}

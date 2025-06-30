@@ -1,0 +1,16 @@
+{
+  "name": "tere_verde",
+  "version": "0.0.1",
+  "description": " Um sistema de backend para visualizar parques, trilhas, cachoeiras e eventos turísticos em Teresópolis, com área de login para administradores.",
+  "license": "ISC",
+  "author": "Mariana Araújo",
+  "type": "commonjs",
+  "main": "app.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "dependencies": {
+    "body-parser": "^2.2.0",
+    "express": "^5.1.0"
+  }
+}

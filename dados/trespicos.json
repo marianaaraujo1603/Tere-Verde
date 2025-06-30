@@ -1,0 +1,33 @@
+{
+  "nome": "Parque Estadual dos Três Picos (PETP)",
+  "localizacao": "Estr. do Jequitibá, 145 - Boca do Mato, Cachoeira de Macacu - RJ, 28680-000.",
+  "horario": "Terça-feira a Domingos e Feriados das 07h-16h",
+  "contato": "(21) 2649-6847",
+  "descricao":"O Parque Estadual dos Três Picos forma um contínuo florestal com o Parque Nacional da Serra dos Órgãos e com a Estação Ecológica do Paraíso, o que aumenta a sua importância como refúgio para inúmeras espécies da fauna e da flora fluminenses, especialmente os grandes mamíferos e aves como a jaguatirica e o gavião-pega-macaco, além de muitos outros. Na região é grande a ocorrência de espécies raras ou endêmicas.",
+  "trilhas": [
+    {
+      "nome": "Trilha Do Cabeça de Dragão",
+      "nível": "Moderado",
+      "tempo": "2h - 3h"
+    }
+  ],
+
+  "cachoeiras": [
+    {
+      "nome": "Cachoeira dos Frades",
+      "acesso": "Difícil",
+      "indicadoPara": "Adultos Experientes"
+    },
+
+    {
+      "nome": "Cachoeira da Barreira",
+      "acesso": "Moderado",
+      "indicadoPara": "Adultos"
+    }
+  ],
+
+  "biodiversidade": {
+    "fauna": ["gavião-pega-macaco", "jaguatiricas"],
+    "flora": ["bromélias", "musgos"]
+  }
+}

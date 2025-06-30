@@ -1,0 +1,45 @@
+{
+  "nome": "Parque Natural Municipal Montanhas de Teresópolis",
+  "localizacao": "Rodovia BR-116, Km 74 s/n - Santa Rita, Teresópolis - RJ.",
+  "horario": "Terça-feira a Domingos e Feriados das 07h-16h",
+  "contato": "(21) 97896-2463",
+  "descricao": "O Centro de Visitantes da Sede Santa Rita conta a história do Parque e sua relação com o entorno. Em parceria com a Universidade do Estado do Rio de Janeiro, o centro de visitantes trouxe aspectos relacionados às novas territorialidades socioambientais. A história da observação de aves passa pela região de Santa Rita. Um pouco deste histórico está representado no centro de visitantes. Você conhecerá sobre a avifauna local e a contribuição da região para o estudo das aves no Brasil. O Centro de Visitantes localizado na Pedra da Tartaruga foi pensado com o objetivo de contar um pouco mais sobre a história da região e também sobre seus aspectos geomorfológicos. A região da Pedra da Tartaruga foi o ponto de partida para a criação do Parque em 2009 e desde então segue sendo a região mais visitada da Unidade de Conservação. As trilhas de fácil acesso, camping, rapel e escalada fazem desta sede o atrativo perfeito para todos os públicos" ,
+  "trilhas": [
+    {
+      "nome": "Trilha Pedra da Tartaruga",
+      "nível": "Moderado",
+      "tempo": "1h - 1h30m"
+    },
+
+    {
+      "nome": "Trilha do Vale Encantado",
+      "nível": "Leve",
+      "tempo": "1h - 1h30m" 
+    },
+       
+    {
+      "nome": "Trilha dos Mirantes",
+      "nível": "Leve",
+      "tempo": "1h"
+    }
+  ],
+
+  "cachoeiras": [
+    {
+      "nome": "Cachoeira da Santa Rita",
+      "acesso": "Fácil",
+      "indicadoPara": "Crianças e Adultos"
+    },
+
+    {
+      "nome": "Cachoeira do Vale Encantado",
+      "acesso": "Leve",
+      "indicadoPara": "Crianças e Adultos"
+    }
+  ],
+
+  "biodiversidade": {
+    "fauna": ["tamanduá-mirim", "preguiça-de-três-dedos"],
+    "flora": ["bromélias", "arbustos endêmicos", "espécies de restinga"]
+  }
+}
