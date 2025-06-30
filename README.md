@@ -9,11 +9,14 @@ O Portal de Ecoturismo Teré-Verde é voltado para divulgar informações sobre 
 
 # Objetivos Principais:
 -> Listagem de Parques e Informações de Trilhas e Cachoeiras;
+
 -> Cadastro de novos eventos e atividades;
+
 -> Navegação clara e intuitiva para facilitar o uso.
 
 # Público-Alvo:
 -> Moradores Locais e Turistas: Interessados em conhecer trilhas, cacoherias e atividades ecológicas em Teresópolis.
+
 -> Administradores: responsáveis pela gestão dos parques, que podem cadastrar eventos de forma simmples, sem necessidade de conhecimentos avançados em programação.
 
 # Tecnologias e Ferramentas: Visual Studio Code, Canva, Node.js, JSON e Express.js.
