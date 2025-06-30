@@ -22,12 +22,17 @@ O Portal de Ecoturismo Teré-Verde é voltado para divulgar informações sobre 
 # Tecnologias e Ferramentas: Visual Studio Code, Canva, Node.js, JSON e Express.js.
 
 # Requisitos Funcionais e Não Funcionais:
+[Teré-Verde_requisitos.pdf](https://github.com/marianaaraujo1603/Tere-Verde/blob/main/Ter%C3%A9-Verde_requisitos.pdf)
 
-# Apresentação:
 
 # Wireframe:
 
-
+![1](https://github.com/marianaaraujo1603/Tere-Verde/blob/main/Wireframe/1.%20Home.png)
+![2](https://github.com/marianaaraujo1603/Tere-Verde/blob/main/Wireframe/2.%20Parnaso.png)
+![3](https://github.com/marianaaraujo1603/Tere-Verde/blob/main/Wireframe/3.%20Tr%C3%AAs%20Picos.png)
+![4](https://github.com/marianaaraujo1603/Tere-Verde/blob/main/Wireframe/4.%20Montanhas.png)
+![5](https://github.com/marianaaraujo1603/Tere-Verde/blob/main/Wireframe/5.%20Login%20Administrador.png)
+![6](https://github.com/marianaaraujo1603/Tere-Verde/blob/main/Wireframe/6.%20Gerenciamento%20de%20Eventos.png)
 
 
 
