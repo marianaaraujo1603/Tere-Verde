@@ -77,14 +77,6 @@ Sempre que cadastrar um novo evento, este arquivo é atualizado automaticamente.
 (https://www.canva.com/design/DAGpmgqX7v0/m8DwWz5h1BnkK6NUseVgaA/edit?utm_content=DAGpmgqX7v0&utm_campaign=designshare&utm_medium=link2&utm_source=sharebutton)
 
 
-# Wireframe:
-
-![1]([https://github.com/marianaaraujo1603/Tere-Verde/blob/main/Wireframe/1.%20Home.png](https://github.com/marianaaraujo1603/Tere-Verde/blob/main/Wireframe/HOME.png))
-![2]([https://github.com/marianaaraujo1603/Tere-Verde/blob/main/Wireframe/2.%20Parnaso.png](https://github.com/marianaaraujo1603/Tere-Verde/blob/main/Wireframe/LOGIN%20HOME.png))
-![3]([https://github.com/marianaaraujo1603/Tere-Verde/blob/main/Wireframe/3.%20Tr%C3%AAs%20Picos.png](https://github.com/marianaaraujo1603/Tere-Verde/blob/main/Wireframe/MODELO%20PARQUES.png))
-![4]([https://github.com/marianaaraujo1603/Tere-Verde/blob/main/Wireframe/4.%20Montanhas.png](https://github.com/marianaaraujo1603/Tere-Verde/blob/main/Wireframe/PAINEL%20ADM.png))
-
-
 
 
 
