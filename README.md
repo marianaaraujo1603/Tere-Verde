@@ -28,56 +28,34 @@ O Portal de Ecoturismo Teré-Verde é voltado para divulgar informações sobre 
 
 Siga os passos abaixo para rodar o projeto localmente.
 
-✅ 1. Clone o repositório
+1. Clone o repositório
 git clone https://github.com/marianaaraujo1603/Tere-Verde.git
 
 Entre na pasta:
 
 cd Tere-Verde
-✅ 2. Instale as dependências
+
+2. Instale as dependências
 
 O backend usa Node.js + Express.
 
 Instale tudo com:
 
 npm install
-✅ 3. Estrutura necessária
 
-O projeto funciona com a seguinte estrutura de pastas:
-
-Tere-Verde/
- ├── front-end/
- │   ├── index.html
- │   ├── adm.html
- │   ├── montanhas.html
- │   ├── trespicos.html
- │   ├── parnaso.html
- │   ├── CSS/
- │   ├── JS/
- │   └── Imagens/
- ├── dados/
- │   ├── eventos.json
- │   ├── montanhas.json
- │   ├── parnaso.json
- │   └── trespicos.json
- ├── server.js
- ├── package.json
-
-Certifique-se de que essa estrutura existe no seu clone.
-
-✅ 4. Rodar o servidor
+3. Rodar o servidor
 
 Execute:
 
 node server.js
 
-✅ 5. Acessar o site
+4. Acessar o site
 
 Após rodar o servidor, acesse:
 
 http://localhost:3000
 
-✅ 6. Acessar o Painel de Login
+5. Acessar o Painel de Login
 
 http://localhost:3000/login
 
@@ -87,7 +65,7 @@ Assim terá acesso ao Portal do Administrador.
 
 O painel permite cadastrar, listar e excluir eventos, que aparecem automaticamente no carrossel da Home.
 
-📝 7. Arquivo de eventos
+6. Arquivo de eventos
 
 Os eventos ficam salvos em:
 
