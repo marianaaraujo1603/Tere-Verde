@@ -1,0 +1,125 @@
+
+body {
+    font-family: Arial, sans-serif;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    margin: 0;
+    background: #3c5946;
+}
+
+.container {
+    background-color: #fff;
+    padding: 30px;
+    border-radius: 10px;
+    box-shadow: 0 0 15px rgba(0, 0, 0, 0.2);
+    width: 90%;
+    max-width: 600px;
+    text-align: center;
+}
+
+.messages {
+    margin-bottom: 20px;
+}
+
+.messages p {
+    font-size: 16px;
+    margin: 0;
+}
+
+.messages a {
+    color: #0D9276;
+    text-decoration: none;
+    font-weight: bold;
+    transition: color 0.3s;
+}
+
+.messages a:hover {
+    color: #3c5946;
+}
+
+h1 {
+    margin-bottom: 20px;
+    font-family: 'Ubuntu', sans-serif;
+    color: #333;
+}
+
+.form-section {
+    display: none;
+    transition: opacity 0.5s ease;
+}
+
+.form-section.active {
+    display: block;
+    opacity: 1;
+}
+
+form {
+    display: flex;
+    flex-direction: column;
+}
+
+.input-group {
+    position: relative;
+    margin-bottom: 20px;
+}
+
+.input-group input,
+.input-group select {
+    width: calc(100% - 20px); 
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    box-sizing: border-box;
+    font-size: 1rem;
+}
+
+.input-group input:focus,
+.input-group select:focus {
+    border-color: #0D9276;
+    outline: none;
+}
+
+.input-group label {
+    position: absolute;
+    top: 10px;
+    left: 15px;
+    pointer-events: none;
+    font-size: 1rem;
+    color: #999;
+    background: #fff;
+    padding: 0 5px;
+}
+
+.input-group input:focus ~ label,
+.input-group input:valid ~ label,
+.input-group select:focus ~ label,
+.input-group select:valid ~ label {
+    top: -15px;
+    left: 10px;
+    font-size: 0.85rem;
+    color: #0D9276;
+    background: transparent;
+    padding: 0; 
+}
+
+.button {
+    display: flex;
+    justify-content: center;
+}
+
+.button button {
+    padding: 10px 20px;
+    background-color: #3c5946;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 16px;
+    transition: background-color 0.3s ease;
+}
+
+.button button:hover {
+    background-color: #0D9276;
+}

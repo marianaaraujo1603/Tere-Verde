@@ -1,0 +1,265 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <title>Portal | Terê Verde</title>
+    <link rel="shortcut icon" href="./Imagens/unifeso-logo.png" type="image/x-icon" />
+
+    <!-- Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;400;700&family=Ubuntu:wght@500;700&display=swap" rel="stylesheet">
+
+    <style>
+        body {
+            background: #3c5946;
+            font-family: "Open Sans", sans-serif;
+            margin: 0;
+            padding: 0;
+        }
+
+        .container-fluid a{
+            color: white !important;
+            font-size: 2rem;
+            margin-left:5rem;
+            border:0%;
+            border: 2px solid white; 
+            border-radius: 10px;
+            font-family: 'Ubuntu', sans-serif;  
+            text-decoration: none;
+        }
+        #adm {
+           margin-top: 2rem;
+         }
+
+        .container-fluid .navbar-brand {
+            color: white !important; 
+            text-decoration: none;
+            
+        }
+
+        .navbar-nav .nav-item a:hover {
+        color: rgb(255, 251, 251);!important
+        opacity: 0.7;
+        }
+
+       
+        .container {
+            background: #fff;
+            width: 90%;
+            max-width: 900px;
+            margin: 3rem auto;
+            padding: 2rem;
+            border-radius: 12px;
+        }
+
+        h1 {
+            color: #15311f;
+            font-family: "Ubuntu", sans-serif;
+            text-align: center;
+            margin-bottom: 20px;
+        }
+
+        h2 {
+            color: #3c5946;
+            margin-top: 30px;
+            border-left: 6px solid #3c5946;
+            padding-left: 10px;
+            font-weight: bold;
+        }
+
+        form input, form textarea {
+            width: 100%;
+            margin: 8px 0;
+            padding: 10px;
+            border-radius: 8px;
+            border: 1px solid #aaa;
+            font-size: 1rem;
+        }
+
+
+        button {
+            padding: 12px 20px;
+            background: #3c5946;
+            color: #fff;
+            border: none;
+            border-radius: 8px;
+            cursor: pointer;
+            font-size: 1rem;
+            font-weight: bold;
+            margin-top: 10px;
+        }
+
+        button:hover {
+            opacity: 0.8;
+        }
+
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            margin-top: 1rem;
+        }
+
+        table th {
+            background: #3c5946;
+            color: #fff;
+            padding: 12px;
+        }
+
+        table td {
+            padding: 10px;
+            border-bottom: 1px solid #ccc;
+        }
+
+        .btn-excluir {
+            background: #a33;
+        }
+
+        .btn-excluir:hover {
+            opacity: .7;
+        }
+
+        .btn-editar {
+            background: #285943;
+            margin-right: 10px;
+        }
+
+        .topo {
+            text-align: center;
+            color: white;
+            margin-bottom: 25px;
+            font-size: 1.7rem;
+            font-family: "Ubuntu", sans-serif;
+        }
+
+    </style>
+</head>
+
+<body>
+
+ <!--navbar-->
+    <nav class="navbar navbar-dark navbar-expand-md" id="adm">
+        <div class="container-fluid">
+          <a class="navbar-brand" href="/">TERE-VERDE</a>
+          <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+          </button>
+        </div>
+  </nav>
+
+   
+<p class="topo"><strong>Bem Vindos ao</strong></p>
+<p class="topo"><strong>Painel Administrativo • Terê Verde</strong></p>
+   
+
+<div class="container">
+
+        <h1>Gerenciar Eventos</h1>
+
+        <h2>Cadastrar Novo Evento</h2>
+
+       <form id="form-evento">
+    <input type="text" id="titulo" placeholder="Título do evento" required>
+
+    <textarea id="descricao" placeholder="Descrição" required></textarea>
+
+    <input type="date" id="data" required>
+
+    <input type="time" id="horario" required>
+
+    <select id="local" required>
+        <option value="">Selecione o parque...</option>
+        <option value="Parnaso">Parnaso</option>
+        <option value="Três Picos">Três Picos</option>
+        <option value="Montanhas de Teresópolis">Montanhas de Teresópolis</option>
+    </select>
+
+    <button type="submit">Cadastrar Evento</button>
+</form>
+
+<p id="msgSucesso" style="color: green; font-weight: bold; display:none;">
+    Evento cadastrado com sucesso!
+</p>
+
+
+        <h2>Eventos Cadastrados</h2>
+
+        <table>
+            <thead>
+                <tr>
+                  <th>Data</th> <th>Horário</th> <th>Descrição</th> <th>Local</th> <th>Ações</th> </tr>
+                </tr>
+            </thead>
+            <tbody id="listaEventos"></tbody>
+        </table>
+
+    </div>
+
+<script>
+async function carregarEventos() {
+    const resposta = await fetch('/api/eventos');
+    const eventos = await resposta.json();
+
+    const tabela = document.getElementById("listaEventos");
+    tabela.innerHTML = "";
+
+    eventos.forEach((ev, index) => {
+        const linha = document.createElement("tr");
+
+        linha.innerHTML = `
+            <td>${ev.titulo}</td>
+            <td>${ev.data}</td>
+            <td>${ev.horario}</td>
+            <td>${ev.descricao}</td>
+            <td>${ev.local}</td>
+            <td>
+                <button class="btn-editar" onclick="editarEvento(${index})">Editar</button>
+                <button class="btn-excluir" onclick="excluirEvento(${index})">Excluir</button>
+            </td>
+        `;
+
+        tabela.appendChild(linha);
+    });
+}
+
+async function cadastrarEvento(event) {
+    event.preventDefault();
+
+    const titulo = document.getElementById("titulo").value;
+    const descricao = document.getElementById("descricao").value;
+    const data = document.getElementById("data").value;
+    const horario = document.getElementById("horario").value;
+    const local = document.getElementById("local").value;
+
+    const resposta = await fetch('/api/eventos', {
+        method: "POST",
+        headers: { "Content-Type": "application/json" },
+        body: JSON.stringify({ titulo, descricao, data, horario, local })
+    });
+
+    if (resposta.ok) {
+        document.getElementById("msgSucesso").style.display = "block";
+        setTimeout(() => document.getElementById("msgSucesso").style.display = "none", 3000);
+
+        document.getElementById("form-evento").reset();
+        carregarEventos();
+    } else {
+        alert("Erro ao cadastrar evento.");
+    }
+}
+
+async function excluirEvento(id) {
+    await fetch(`/api/eventos/${id}`, { method: "DELETE" });
+    carregarEventos();
+}
+
+function editarEvento(id) {
+    alert("Função editar não está disponível no momento");
+}
+
+document.getElementById("form-evento").addEventListener("submit", cadastrarEvento);
+
+carregarEventos();
+</script>
+
+
+</body>
+</html>

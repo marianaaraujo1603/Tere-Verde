@@ -3,12 +3,13 @@ const path = require('path');
 const fs = require('fs');
 const bodyParser = require('body-parser');
 
+
 const router = express.Router();
 
 const app = express();
 
 const eventosPath = path.join(__dirname,'dados', '/eventos.json');
-
+app.use(express.static('front-end'));
 app.use(bodyParser.urlencoded({extended:true}));
 
 const user = "adm";
@@ -17,32 +18,7 @@ const password = "adm";
 
 // Login 
 app.get('/login', (req, res) => {
-    res.send(`
-        <p><strong>Teré-Verde</strong></p>
-        <h1>Bem vindo (a) ao Portal do Administrador!</h1>
-        <br>
-        <p><strong>Entre com suas Credenciais:</strong></p>
-        <br>
-        <form action="/login" method="POST">
-            <input type="text" name="login" placeholder="Insira o Login:" required/>
-            <input type="password" name="senha" placeholder="Informe a Senha" required/>
-            <button type="submit">Entrar</button>
-        </form>
-    `);
-});
-
-app.post('/login', (req, res) => {
-    const { login, senha } = req.body;
-
-    if (login === user && senha === password) {
-        res.redirect('/portal');
-
-    } else {
-        res.send(`
-            <p>Oops! Login ou senha incorretos. Tente novamente.</p>
-            <a href="/login"><button type="submit">Voltar</button></a>
-        `);
-    }
+    res.sendFile(path.join(__dirname, 'front-end', 'login.html'));
 });
 
 

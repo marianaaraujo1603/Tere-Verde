@@ -1,0 +1,167 @@
+@media (min-width: 768px) {
+    .navbar-toggler {
+        display: none;
+    }
+    .navbar-collapse {
+        display: flex !important;
+        flex-basis: auto;
+    }
+}
+
+.container-fluid{
+    padding: 0;
+    background:#3c5946; 
+}
+
+.container-fluid .navbar-brand
+{
+    font-size: 2rem;
+    font-family: 'Ubuntu',sans-serif;
+    font-weight: bold;
+    padding-left: 4.2%;
+    border:0%;
+    border-radius: 15px;
+    margin:0%;
+}
+
+.navbar-nav .nav-item {
+    display:inline-flex !important;
+    margin-right: 10rem;
+}
+
+.navbar-nav a{
+    color: white;
+    font-size: 25px;
+    font-family: 'Ubuntu', sans-serif;  
+    text-decoration: none;
+}
+
+.navbar-nav .nav-item a:hover {
+    color: rgb(255, 251, 251);
+    opacity: 0.7;
+}
+
+.navbar {
+  width: 100%;
+  margin: 0 !important;
+  padding: 0 !important;
+  background: #3c5946 !important;
+}
+
+.navbar-brand {
+  padding-left: 20px !important;
+}
+
+
+/*Parque*/
+
+.parque-container {
+  width: 90%;
+  max-width: 1000px;
+  margin: 4rem auto;
+  padding: 2rem;
+  font-family: "Open Sans", sans-serif;
+}
+
+.parque-container h1 {
+  color: #15311f;
+  font-size: 2.5rem;
+  margin-bottom: 1rem;
+  font-weight: bold;
+}
+
+.parque-container h2 {
+  margin-top: 2rem;
+  font-size: 1.8rem;
+  color: #3c5946;
+  border-left: 5px solid #3c5946;
+  padding-left: 10px;
+}
+
+.parque-container p {
+  font-size: 1.1rem;
+  margin: 10px 0;
+  line-height: 1.6;
+}
+
+.lista {
+  background: #fff;
+  padding: 1rem 1.5rem;
+  border-radius: 10px;
+  margin-top: 1rem;
+}
+
+.lista li {
+  margin-bottom: .7rem;
+}
+
+/* Tabelas */
+table {
+  width: 100%;
+  margin-top: 1rem;
+  border-collapse: collapse;
+}
+
+table th, table td {
+  padding: 10px;
+  border-bottom: 1px solid #ccc;
+}
+
+table th {
+  background: #3c5946;
+  color: #fff;
+}
+
+.galeria {
+  width: 80%;
+  margin: 50px auto;
+}
+
+.galeria h2 {
+  text-align: center !important;
+  border-left: none !important;
+  padding-left: 0 !important;
+  font-family: "Open Sans", sans-serif;
+  font-weight: bold;
+  color: #15311f;
+  margin-bottom: 30px;
+}
+
+.carousel-item img {
+  height: 400px;
+  object-fit: cover;
+  border-radius: 10px;
+}
+
+.carousel-control-prev-icon,
+.carousel-control-next-icon {
+  filter: invert(100%);
+}
+
+/* Botão voltar */
+.btn-voltar {
+  display: inline-block;
+  margin-top: 1rem;
+  padding: 10px 20px;
+  background: #3c5946;
+  color: #fff;
+  text-decoration: none;
+  margin-left: 80%;
+  font-weight: bold;
+  border-radius: 8px;
+}
+
+.btn-voltar:hover {
+  opacity: .8;
+  color: #fff;
+}
+
+.galeria h2 {
+  text-align: center !important;
+  border-left: none !important;
+  padding-left: 0 !important;
+  font-family: "Open Sans", sans-serif;
+  font-weight: bold;
+  color: #15311f;
+  margin-bottom: 30px;
+}

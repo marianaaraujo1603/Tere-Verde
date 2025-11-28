@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Login | Terê-Verde</title>
+    <link rel="shortcut icon" href="./Imagens/unifeso-logo.png" type="image/x-icon" />
+    <!--Fonts-->
+    <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;400;600;700&family=Ubuntu:wght@300;400;500;700&display=swap" rel="stylesheet">
+
+    <link rel="stylesheet" href="CSS/login.css">
+</head>
+
+<body>
+     <div class="container">
+        <div class="messages">
+            <p id="msg-login">Não possui login? <a href="#" id="link-cadastro">Cadastre seu perfil</a></p>
+            <p id="msg-cadastro" style="display: none;">Já possui sua conta? <a href="#" id="link-login">Entre com seu login</a></p>
+        </div>
+
+        <!-- Formulário de Login -->
+        <div id="login" class="form-section active">
+            <h1>LOGIN</h1>
+            <form onsubmit="return logar()">
+                <div class="input-group">
+                    <input type="text" id="loginUsername" required>
+                    <label for="loginUsername">Usuário</label>
+                </div>
+                <div class="input-group">
+                    <input type="password" id="loginPassword" required>
+                    <label for="loginPassword">Senha</label>
+                </div>
+                <div class="button">
+                    <button type="submit">Entrar</button>
+                </div>
+            </form>
+        </div>
+
+        <!-- Formulário de Cadastro -->
+        <div id="signup" class="form-section">
+            <h1>CADASTRO</h1>
+            <form onsubmit="return cadastrar()">
+                <div class="input-group">
+                    <input type="text" id="signupNome" required>
+                    <label for="signupNome">Nome</label>
+                </div>
+                <div class="input-group">
+                    <input type="text" id="signupSobrenome" required>
+                    <label for="signupSobrenome">Sobrenome</label>
+                </div>
+                <div class="input-group">
+                    <input type="email" id="signupEmail" required>
+                    <label for="signupEmail">E-mail</label>
+                </div>
+                <div class="input-group">
+                    <input type="tel" id="signupTelefone" required>
+                    <label for="signupTelefone">Telefone</label>
+                </div>
+                <div class="input-group">
+                    <input type="date" id="signupDataNascimento" required>
+                    <label for="signupDataNascimento">Data de Nascimento</label>
+                </div>
+                <div class="input-group">
+                    <select id="signupTipo" required>
+                        <option value="">Selecione...</option>
+                        <option>Parnaso</option>
+                        <option>Três Picos</option>
+                        <option>Montanhas de Teresópolis</option>
+                    </select>
+                    <label for="signupTipo">Informe o Parque:</label>
+                </div>
+                <div class="input-group">
+                    <input type="password" id="signupSenha" required>
+                    <label for="signupSenha">Senha</label>
+                </div>
+                <div class="button">
+                    <button type="submit">Cadastrar</button>
+                </div>
+            </form>
+        </div>
+    </div>
+    
+
+<!--JavaScript-->
+    <script>
+        document.getElementById('link-cadastro').addEventListener('click', function(event) {
+    event.preventDefault();
+    showSection('signup');
+    document.getElementById('msg-login').style.display = 'none';
+    document.getElementById('msg-cadastro').style.display = 'block';
+});
+
+document.getElementById('link-login').addEventListener('click', function(event) {
+    event.preventDefault();
+    showSection('login');
+    document.getElementById('msg-login').style.display = 'block';
+    document.getElementById('msg-cadastro').style.display = 'none';
+});
+
+function showSection(section) {
+    var sections = document.querySelectorAll('.form-section');
+    sections.forEach(function(sec) {
+        sec.classList.remove('active');
+    });
+    document.getElementById(section).classList.add('active');
+}
+
+function logar() {
+    var loginUsername = document.getElementById('loginUsername').value;
+    var loginPassword = document.getElementById('loginPassword').value;
+
+    if (loginUsername === "admin" && loginPassword === "admin") {
+        alert('Login bem-sucedido!');
+        window.location.href = 'adm.html';
+    } else {
+        alert('Usuário ou senha incorretos');
+    }
+    return false;
+}
+
+function cadastrar() {
+    var nome = document.getElementById('signupNome').value;
+    var sobrenome = document.getElementById('signupSobrenome').value;
+    var email = document.getElementById('signupEmail').value;
+    var telefone = document.getElementById('signupTelefone').value;
+    var dataNascimento = document.getElementById('signupDataNascimento').value;
+    var tipo = document.getElementById('signupTipo').value;
+    var senha = document.getElementById('signupSenha').value;
+
+    alert('Cadastro realizado com sucesso!');
+    window.location.href = 'adm.html';
+    return false;
+}
+
+    </script>
+</body>
+</html>
