@@ -19,7 +19,8 @@ O Portal de Ecoturismo Teré-Verde é voltado para divulgar informações sobre 
 
 -> Administradores: responsáveis pela gestão dos parques, que podem cadastrar eventos de forma simmples, sem necessidade de conhecimentos avançados em programação.
 
-# Tecnologias e Ferramentas: Visual Studio Code, Canva, Node.js, JSON e Express.js.
+# Tecnologias e Ferramentas: 
+Visual Studio Code, Canva, Node.js, HTML5, CSS3, JAVASCRIPT, JSON e Express.js.
 
 # Requisitos Funcionais e Não Funcionais:
 [[Teré-Verde_requisitos.pdf](https://github.com/marianaaraujo1603/Tere-Verde/blob/main/Ter%C3%A9-Verde_requisitos.pdf)]
