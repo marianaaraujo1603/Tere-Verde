@@ -1,13 +1,32 @@
 const express = require('express');
+const fs = require("fs");
+const path = require("path");
+
 const app = express();
+app.use(express.json());
 
 //Parques e Eventos//
 const montanhas = require('./dados/montanhas.json');
 const parnaso = require('./dados/parnaso.json');
 const trespicos = require('./dados/trespicos.json');
-const eventos = require('./dados/eventos.json');
 
-app.use(express.json());
+// Caminho do arquivo de eventos
+const eventosPath = path.join(__dirname, "dados", "eventos.json");
+
+// Função para carregar eventos
+function carregarEventos() {
+    if (!fs.existsSync(eventosPath)) {
+        return [];
+    }
+    const data = fs.readFileSync(eventosPath, "utf8");
+    return JSON.parse(data || "[]");
+}
+
+// Função para salvar eventos
+function salvarEventos(eventos) {
+    fs.writeFileSync(eventosPath, JSON.stringify(eventos, null, 2), "utf8");
+}
+
 app.use(express.static('front-end'));
 
 //Rotas Front-End//
@@ -39,20 +58,16 @@ app.get('/api/trespicos', (req, res) => {
     res.json(trespicos);
 });
 
+// Listar eventos
 app.get('/api/eventos', (req, res) => {
+    const eventos = carregarEventos();
     res.json(eventos);
 });
 
-app.get('/login', (req, res) => {
-    res.sendFile(__dirname + '/front-end/login.html');
-});
+// Login
+const USER = "admin";
+const PASSWORD = "1234";
 
-app.get('/portal', (req, res) => {
-    res.sendFile(__dirname + '/front-end/adm.html');
-})
-
-
-//Login//
 app.post("/api/login", (req, res) => {
     const { login, senha } = req.body;
 
@@ -63,13 +78,12 @@ app.post("/api/login", (req, res) => {
     return res.json({ ok: false, message: "Usuário ou senha incorretos" });
 });
 
-//Portal Adm - Eventos//
-
+// Criar evento
 app.post('/api/eventos', (req, res) => {
     const eventos = carregarEventos();
 
     const novoEvento = {
-       titulo: req.body.titulo,
+        titulo: req.body.titulo,
         descricao: req.body.descricao,
         data: req.body.data,
         horario: req.body.horario,
@@ -87,7 +101,9 @@ app.delete('/api/eventos/:id', (req, res) => {
     const eventos = carregarEventos();
     const id = Number(req.params.id);
 
-    if (!eventos[id]) return res.status(404).json({ error: "Evento não encontrado" });
+    if (!eventos[id]) {
+        return res.status(404).json({ error: "Evento não encontrado" });
+    }
 
     eventos.splice(id, 1);
     salvarEventos(eventos);
